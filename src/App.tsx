@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import MapContainer from "./pages/MapContainer";
+
 import './App.css';
+import Count from "./pages/Count";
+import TodoApp from "./pages/TodoApp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MapContainer />} />
+          <Route path="/count" element={<Count />} />
+          <Route path="/todo" element={<TodoApp />} />
+        </Routes>
+      </BrowserRouter>
+    </React.Fragment>
   );
 }
 
