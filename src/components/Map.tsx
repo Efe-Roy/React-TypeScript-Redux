@@ -23,7 +23,7 @@ type MapProps = React.PropsWithChildren<{
 export default function Map(props: MapProps) {
   const { setMap, children } = props;
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBsk8fe2yngY-Nz5su1YrOLUneiYcYXSms" // ,
+    googleMapsApiKey: "AIzaSyDX6o8zSFDpNRCvdEY9mCMy7z6v9fCYJkY" // ,
     // ...otherOptions
   });
 
